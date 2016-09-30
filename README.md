@@ -1,5 +1,7 @@
 # One Month Rails
 
-This is the pinteresting sample application for [*One Month Rails*](http://onemonthrails.com)
+This is a pinterest clone application from [*One Month Rails*](http://onemonthrails.com).
 
-by [Jimmy Adames](http://jadames.herokuapp.com)
+The application is part of Startup Institute's Web Development first assignment.
+
+created by [Jimmy Adames](http://jadames.herokuapp.com)
