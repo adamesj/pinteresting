@@ -24,3 +24,5 @@
 /log/*.log
 /tmp
 .DS_Store
+
+/config/*aws.yml

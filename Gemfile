@@ -12,8 +12,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootstrap-sass'
 gem 'devise', '~> 4.2'
 gem 'paperclip'
-gem 'aws-sdk', '~> 2.3'
-gem 'foreman', '~> 0.82.0'
+gem 'aws-sdk'
 gem 'masonry-rails', '~> 0.2.4'
 
 group :development, :test do
