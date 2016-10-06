@@ -41,10 +41,12 @@ GEM
     arel (7.1.2)
     autoprefixer-rails (6.5.0.1)
       execjs
-    aws (2.10.2)
-      http_connection
-      uuidtools
-      xml-simple
+    aws-sdk (2.6.5)
+      aws-sdk-resources (= 2.6.5)
+    aws-sdk-core (2.6.5)
+      jmespath (~> 1.0)
+    aws-sdk-resources (2.6.5)
+      aws-sdk-core (= 2.6.5)
     bcrypt (3.1.11)
     bootstrap-sass (3.3.7)
       autoprefixer-rails (>= 5.2.1)
@@ -75,11 +77,11 @@ GEM
     ffi (1.9.14)
     globalid (0.3.7)
       activesupport (>= 4.1.0)
-    http_connection (1.4.4)
     i18n (0.7.0)
     jbuilder (2.6.0)
       activesupport (>= 3.0.0, < 5.1)
       multi_json (~> 1.2)
+    jmespath (1.3.1)
     jquery-rails (4.2.1)
       rails-dom-testing (>= 1, < 3)
       railties (>= 4.2.0)
@@ -179,7 +181,6 @@ GEM
       thread_safe (~> 0.1)
     uglifier (3.0.2)
       execjs (>= 0.3.0, < 3)
-    uuidtools (2.1.5)
     warden (1.2.6)
       rack (>= 1.0)
     web-console (3.3.1)
@@ -190,13 +191,12 @@ GEM
     websocket-driver (0.6.4)
       websocket-extensions (>= 0.1.0)
     websocket-extensions (0.1.2)
-    xml-simple (1.1.5)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  aws (~> 2.10, >= 2.10.2)
+  aws-sdk (~> 2.3, >= 2.3.9)
   bootstrap-sass
   byebug
   coffee-rails (~> 4.2)
