@@ -12,7 +12,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bootstrap-sass'
 gem 'devise', '~> 4.2'
 gem 'paperclip'
-gem 'aws-sdk'
+gem 'aws-sdk', '~> 2.3'
 gem 'masonry-rails', '~> 0.2.4'
 
 group :development, :test do
