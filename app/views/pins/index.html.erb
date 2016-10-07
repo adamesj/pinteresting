@@ -1,15 +1,29 @@
+<div class="jumbotron center">
+  <h1>Welcome to my app!</h1>
+  <p>
+    <%= link_to "Log in", new_user_session_path, class: "btn btn-default btn-lg" %>
+    <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
+  </p>
+</div>
+
 <div id="pins" class="transitions-enabled">
   <% @pins.each do |pin| %>
     <div class="box panel panel-default">
-      <%= image_tag pin.image.url(:medium) %>
+      <%= link_to image_tag(pin.image.url(:medium)), pin %>
       <div class="panel-body">
-        <%= pin.description %>
-        <%= pin.user.email if pin.user %>
-
-        <%= link_to 'Show', pin %>
+        <p><%= pin.description %></p>
+        <p><strong><%= pin.user.email if pin.user %></strong></p>
         <% if pin.user == current_user %>
-          <%= link_to 'Edit', edit_pin_path(pin) %>
-          <%= link_to 'Destroy', pin, method: :delete, data: { confirm: 'Are you sure?' } %>
+          <div class="actions">
+            <%= link_to edit_pin_path(pin) do %>
+              <span class="glyphicon glyphicon-edit"></span>
+              Edit
+            <% end %>
+            <%= link_to pin, method: :delete, data: { confirm: 'Are you sure?' } do %>
+              <span class="glyphicon glyphicon-trash"></span>
+              Delete
+            <% end %>
+          </div>
         <% end %>
       </div>
     </div>

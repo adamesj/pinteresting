@@ -9,6 +9,15 @@
         <span class="icon-bar"></span>
       </button>
       <%= link_to "Pinteresting", root_path, class: "navbar-brand" %>
+      <ul class="nav navbar-nav navbar-left">
+        <% if user_signed_in? %>
+          <li>
+            <%= link_to new_pin_path do %>
+              <button class="btn-xs btn-danger"><span class="glyphicon glyphicon-plus"></span> New Pin</button>
+            <% end %>
+          </li>
+        <% end %>
+      </ul>
     </div>
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -16,7 +25,6 @@
         <li><%= link_to 'Home', root_path %></li>
         <li><%= link_to 'About', about_path %></li>
         <% if user_signed_in? %>
-          <li><%= link_to 'New Pin', new_pin_path %></li>
           <li><%= link_to 'Account Settings', edit_user_registration_path %></li>
           <li><%= link_to 'Log out', destroy_user_session_path, method: :delete %></li>
         <% else %>
