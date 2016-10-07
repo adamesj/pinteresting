@@ -1,9 +1,11 @@
 <div class="jumbotron center">
   <h1>Welcome to my app!</h1>
-  <p>
-    <%= link_to "Log in", new_user_session_path, class: "btn btn-default btn-lg" %>
-    <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
-  </p>
+  <% unless user_signed_in? %>
+    <p>
+      <%= link_to "Log in", new_user_session_path, class: "btn btn-default btn-lg" %>
+      <%= link_to "Sign up", new_user_registration_path, class: "btn btn-primary btn-lg" %>
+    </p>
+  <% end %>
 </div>
 
 <div id="pins" class="transitions-enabled">
@@ -28,4 +30,8 @@
       </div>
     </div>
   <% end %>
+</div>
+
+<div class="center">
+   <%= will_paginate @pins, renderer: BootstrapPagination::Rails %>
 </div>
